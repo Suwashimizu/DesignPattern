@@ -16,4 +16,5 @@ fun main(args : Array<String>) {
     for(i in 0..500 step 33){
         alice.support(Trouble(i))
     }
+
 }

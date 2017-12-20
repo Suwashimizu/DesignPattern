@@ -8,7 +8,7 @@ package chainofresponsibility
  * GUIなどで使用される
  * androidのTouchEventなんかもそう
  */
-abstract class Support(val name: String) {
+abstract class Support(private val name: String) {
     //たらい回し先のクラス
     var next: Support? = null
 
@@ -30,12 +30,12 @@ abstract class Support(val name: String) {
     abstract fun resolve(trouble: Trouble): Boolean
 
     //解決
-    fun done(trouble: Trouble) {
+    private fun done(trouble: Trouble) {
         println("$trouble is resolved by [$this].")
     }
 
     //未解決
-    fun fail(trouble: Trouble){
+    private fun fail(trouble: Trouble){
         println("$trouble cannot be resolved.")
     }
 
