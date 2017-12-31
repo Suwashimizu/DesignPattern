@@ -22,9 +22,11 @@ fun main(args: Array<String>) {
     val d1: Display = Display(StringDisplayImpl("Hello, Japan."))
     val d2: Display = CountDisplay(StringDisplayImpl("Hello, World."))
     val d3: CountDisplay = CountDisplay(StringDisplayImpl("Hello, Universe."))
+    val d4: RandomDisplay = RandomDisplay(StringDisplayImpl("Hello, US"))
 
     d1.display()
     d2.display()
     d3.display()
     d3.multiDisplay(5)
+    d4.randomDisplay(5)
 }
