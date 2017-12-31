@@ -5,7 +5,7 @@ package bridge
  *
  * 指定回数だけ表示するという機能を追加したクラス
  */
-class CountDisplay(impl:DisplayImpl) : Display(impl){
+open class CountDisplay(impl:DisplayImpl) : Display(impl){
 
     fun multiDisplay(times:Int){
         open()
